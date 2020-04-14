@@ -1,0 +1,22 @@
+{
+  "name": "covid-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tolu-six/covid-app.git"
+  },
+  "author": "Tolulope Odumosu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tolu-six/covid-app/issues"
+  },
+  "homepage": "https://github.com/tolu-six/covid-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
