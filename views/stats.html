@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Statistic</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+    <header class="main_header">
+        <nav class="main_img_nav">Hyy</nav> <!--Covid Img-->
+    
+        <nav class="main_nav">
+            <ul>
+                <li class="main_nav_items">Isolation Centers</li>
+                <li class="main_nav_items">Statistic</li>
+                <li class="main_nav_items">Precaution</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="col-md-8 col-xd-8">
+            <table id="stat-table" class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>State</th>
+                        <th>Total</th>
+                        <th>Active</th>
+                        <th>Discharged</th>
+                        <th>Deaths</th>
+                        <th>% Total</th>
+                        <th>% Active</th>
+                        <th>% Discharged</th>
+                        <th>% Deaths</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <script>
+                        console.log(listObj);
+                        for (let index = 1; index < listObj.length - 1; index++) {
+
+                                const tbody = document.getElementByTagName("tbody");
+
+                                const tr = tbody.insertRow();
+
+                                const cell = document.createElement("td");
+                                const cellText1 = document.createTextNode(listObj[index].stateAffected);
+                                cell.appendChild(cellText);
+                                row.appendChild(cell);
+                                tr.appendChild("td");
+                        }   
+                    </script>
+                    <!-- for (let index = 1; index < listObj.length - 1; index++) {
+
+                        //     // return {
+                                
+                        //     // }
+                        //     const state = listObj[index].stateAffected;
+                        //     const confirmedCases = listObj[index].confirmedCases;
+                            
+                        // } -->
+                    <!-- <tr role="row" class="odd">
+                        <td tabindex="0">Lagos</td><td>232</td><td>140</td><td>85</td><td>7</td><td>24</td><td class="sorting_1">2</td><td>16</td><td>1</td></tr><tr role="row" class="even"><td tabindex="0">Abuja FCT</td><td>58</td><td>33</td><td>23</td><td>2</td><td>36</td><td class="sorting_1">1</td><td>12</td><td>0</td></tr><tr role="row" class="odd"><td tabindex="0">Osun</td><td>20</td><td>9</td><td>11</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="even"><td tabindex="0">Edo</td><td>15</td><td>14</td><td>0</td><td>1</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="odd"><td tabindex="0">Oyo</td><td>11</td><td>7</td><td>4</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="even"><td tabindex="0">Ogun</td><td>9</td><td>7</td><td>2</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="odd"><td tabindex="0">Bauchi</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="even"><td tabindex="0">Kaduna</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="odd"><td tabindex="0">Akwa Ibom</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="even"><td tabindex="0">Katsina</td><td>7</td><td>6</td><td>0</td><td>1</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="odd"><td tabindex="0">Kwara</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="even"><td tabindex="0">Kano</td><td>16</td><td>16</td><td>0</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="odd"><td tabindex="0">Delta</td><td>4</td><td>3</td><td>0</td><td>1</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="even"><td tabindex="0">Ondo</td><td>3</td><td>3</td><td>0</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="odd"><td tabindex="0">Enugu</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="even"><td tabindex="0">Ekiti</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="odd"><td tabindex="0">Rivers</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="even"><td tabindex="0">Benue</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="odd"><td tabindex="0">Niger</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr><tr role="row" class="even"><td tabindex="0">Anambra</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td class="sorting_1">0</td><td>0</td><td>0</td></tr></tbody>
+             -->
+            </tbody>
+            </table>
+        </div>
+        <!-- <section></section>
+        <section></section> -->
+    </main>
+</body>
+</html>
