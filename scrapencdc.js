@@ -30,15 +30,15 @@ rp(url)
     saveToDatabase(data);
 })
 .catch(err => {
-
+    console.log(err);
 });
 
 
 const saveToDatabase = data => {
 
-          let item = JSON.stringify(data)
-
-            db.setex('statistics', 3600, item, (err, reply) => {
+          let item = JSON.stringify(data);
+          
+            db.set('statistics', item, (err, reply) => {
                return err ? console.log(err) : console.log(reply);
             });
 }
@@ -46,4 +46,4 @@ const saveToDatabase = data => {
 const numParse = (string) => {
     let num = parseInt(string)
     return isNaN(num) ? string : num
-}
+};

@@ -10,8 +10,16 @@ router.get('/statistic', (req, res) => {
     const data = scrappedData;
 
     db.get('statistics', function(err, data) {
-         const listObj = JSON.parse(data);
-        res.render('stats', {listObj : listObj});
+
+        const list = JSON.parse(data);   
+
+         //const listObj = JSON.stringify(data);
+         const listObj_length = list.length;
+         
+        res.render('stats', {
+            list : list,
+            listObj_length : listObj_length
+        });
 
     });
 });

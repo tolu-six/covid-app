@@ -5,23 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVID-19 Statistic</title>
     <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <header class="main_header">
-        <nav class="main_img_nav">Hyy</nav> <!--Covid Img-->
-    
-        <nav class="main_nav">
-            <ul>
-                <li class="main_nav_items">Isolation Centers</li>
-                <li class="main_nav_items">Statistic</li>
-                <li class="main_nav_items">Precaution</li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('includes/header.ejs') %>
 
     <main>
         <div class="col-md-8 col-xd-8">
-            <table id="stat-table" class="table">
+            <table id="stat-table" class="table table-striped">
                 <thead class="thead-light">
                     <tr>
                         <th>State</th>
@@ -36,14 +27,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% for (let index = 1; index < listObj.length - 1; index++) { %>
-
+                    <% for (let index = 1; index < listObj_length; index++) { %>
                         <tr>
-                            <td><%= listObj[index].stateAffected %></td>
-                            <td><%= listObj[index].confirmedCase %></td>
-                            <td><%= listObj[index].activeCases %></td>
-                            <td><%= listObj[index].discharged %></td>
-                            <td><%= listObj[index].death %></td>
+                            <td><%= list[index].stateAffected %></td>
+                            <td><%= list[index].confirmedCase %></td>
+                            <td><%= list[index].activeCases %></td>
+                            <td><%= list[index].discharged %></td>
+                            <td><%= list[index].death %></td>
                         </tr>
                     <% } %>
             </tbody>
