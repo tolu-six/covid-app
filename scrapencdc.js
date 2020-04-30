@@ -1,4 +1,4 @@
-const db = require('./database');
+const redisDB = require('./databases/redis_database');
 const rp = require('request-promise');
 const request = require('request');
 const cheerio = require('cheerio');
@@ -33,12 +33,10 @@ rp(url)
     console.log(err);
 });
 
-
 const saveToDatabase = data => {
-
           let item = JSON.stringify(data);
           
-            db.set('statistics', item, (err, reply) => {
+            redisDB.set('statistics', item, (err, reply) => {
                return err ? console.log(err) : console.log(reply);
             });
 }

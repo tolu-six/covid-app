@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVID-19 Statistic</title>
-    <link rel="stylesheet" href="../style.css" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</head>
+<%- include('includes/head.ejs') %>
 <body>
     <%- include('includes/header.ejs') %>
-
     <main>
         <div class="col-md-8 col-xd-8">
             <table id="stat-table" class="table table-striped">
@@ -21,9 +12,9 @@
                         <th>Discharged</th>
                         <th>Deaths</th>
                         <th>% Total</th>
-                        <th>% Active</th>
+                        <!-- <th>% Active</th>
                         <th>% Discharged</th>
-                        <th>% Deaths</th>
+                        <th>% Deaths</th> -->
                     </tr>
                 </thead>
                 <tbody>
